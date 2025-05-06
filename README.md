@@ -20,3 +20,36 @@ This project follows the **Spring MVC (Model-View-Controller)** architecture:
 - **Controller**: Handles HTTP requests and maps them to service calls
 - **Service**: Contains business logic
 - **Repository**: Interface for database interaction using Spring Data JPA
+
+## ⚙️ Setup Instructions
+
+1. Clone the Repository
+
+ ```bash
+ git clone https://github.com/the-november-man/expense-tracker.git
+ cd expense-tracker
+ ```
+2. Configure PostgreSQL
+
+ Make sure PostgreSQL is running and update the `application.properties` file in the `src/main/resources/` directory with your database credentials:
+
+ ```properties
+ spring.datasource.url=jdbc:postgresql://localhost:5432/expense_db
+ spring.datasource.username=your_username
+ spring.datasource.password=your_password
+
+ spring.jpa.hibernate.ddl-auto=update
+ spring.jpa.show-sql=true
+ ```
+3. Build and Run the Application
+
+ ```bash
+ ./mvnw spring-boot:run
+ ```
+---
+
+## ✅ Requirements
+
+- Java 21+
+- Maven 3.8+
+- PostgreSQL 12+
